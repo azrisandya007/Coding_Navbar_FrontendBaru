@@ -1,0 +1,119 @@
+    <!DOCTYPE html>
+    <html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Entry Data Kasus</title>
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        
+        <link rel="stylesheet" href="entry.css">
+    </head>
+
+    <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+        <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#">Entry Kasus</a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="../dashboard/dashboard.html">🏠 Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../entry data/entry.html">📝 Entry Data</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../RekapaData/rekap.html">📄 Rekap Data</a>
+            </li>
+            </ul>
+            
+            <div class="d-flex">
+                <button id="logout" class="btn btn-danger btn-sm">⏻ Logout</button>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h2>Entry Data Kasus</h2>
+
+        <form id="kasusForm">
+            <div class="row">
+                <label>Tanggal Kejadian</label>
+                <input type="date" id="tanggal" required>
+            </div>
+
+            <div class="row">
+                <label>Asal Koordinator</label>
+                <input type="text" id="koordinator" placeholder="Nama koordinator" required>
+            </div>
+
+            <div class="row">
+                <label>Nama Santri</label>
+                <input type="text" id="nama" placeholder="Nama lengkap santri" required>
+            </div>
+
+            <div class="row">
+                <label>Kelas</label>
+                <input type="text" id="kelas" placeholder="VII / VIII / IX" required>
+            </div>
+
+            <div class="row">
+                <label>Status</label>
+                <select id="status" required>
+                    <option value="Sidang">Sidang</option>
+                    <option value="Proses">Proses</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <label>Nomor Induk</label>
+                <input type="number" id="induk" placeholder="Nomor induk" required>
+            </div>
+
+            <div class="row">
+                <label>Nomor Orang Tua</label>
+                <input type="number" id="ortu" placeholder="Nomor HP orang tua" required>
+            </div>
+
+            <div class="row">
+                <label>Kamar</label>
+                <input type="text" id="kamar" placeholder="Contoh: B-12" required>
+            </div>
+
+            <div class="row">
+                <label>Wali Kamar</label>
+                <input type="text" id="wali" placeholder="Nama wali kamar" required>
+            </div>
+
+            <div class="row">
+                <label>Kronologi Kasus</label>
+                <textarea id="kronologi" placeholder="Tulis kronologi lengkap kasus..." required></textarea>
+            </div>
+
+            <div class="btn-group">
+                <button type="button" id="previewBtn">Preview</button>
+                <button type="submit" id="saveBtn">Simpan Data</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="modal" id="previewModal">
+        <div class="modal-content">
+            <h3>Preview Data Kasus</h3>
+            <div id="previewData"></div>
+            <button id="closeModal">Tutup</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="entry.js"></script>
+    </body>
+    </html>
